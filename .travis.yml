@@ -192,7 +192,7 @@ jobs:
         - cd ../..
         - fusermount -u mount
 
-        - v2/lfs --migrate /dev/loop0
+        - v2/lfs --migrate --block_cycles=1024 /dev/loop0
         - v2/lfs /dev/loop0 mount
 
         # run self-host test with v2 right where we left off

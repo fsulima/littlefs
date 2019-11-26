@@ -174,7 +174,7 @@ jobs:
       script:
         # compile v1 and v2
         - make -C v1
-        - make -C v2
+        - make -C v2 CFLAGS+='-DLFS_YES_TRACE'
 
         # run self-host test with v1
         - v1/lfs --format /dev/loop0
